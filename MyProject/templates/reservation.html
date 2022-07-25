@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="conatiner-fluid px-0 mb-3 ">   
+<img src="https://source.unsplash.com/1000x250/?phone,contact" class="d-block w-100 mx-0 " alt="...">
+</div>
+
+
+<div class="container mb-3 py-4 ">
+    <h2 class="text-center">RAILWAY RESERVATION</h2>
+
+
+<form method="POST" action="/reservation">
+{% csrf_token %}
+    
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+  </div>
+
+  <div class="form-group">
+      <label for="age">Age</label>
+     <input type="text" class="form-control" id="age" name="age" placeholder="Enter your Age">
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <input type="text" class="form-control" id="gender" name="gender" placeholder="Enter your Gender">
+  </div>
+
+  <div class="form-group">
+    <label for="medicalpractitioner">MedicalPractitioner</label>
+    <input type="text" class="form-control" id="medicalpractitioner" name="medicalpractitioner" placeholder="If you are a MedicalPractitioner,type yes in Box">
+  </div>
+
+  <div class="form-group ">
+    <label for="seniorcitizen">SeniorCitizen</label>
+    <input type="text" class="form-control" id="seniorcitizen" name="seniorcitizen" placeholder="If you are a SeniorCitizen,type yes in Box ">
+  </div>
+
+  <div class="form-group ">
+    <label for="trainno">TrainNo</label>
+    <input type="text" class="form-control" id="trainno" name="trainno" placeholder="Enter your Train Number ">
+  </div>
+
+  <div class="form-group ">
+    <label for="trainname">TrainName</label>
+    <input type="text" class="form-control" id="trainname" name="trainname" placeholder="Enter the Train Name ">
+  </div>
+
+  <div class="form-group ">
+    <label for="classname">ClassName</label>
+    <input type="text" class="form-control" id="classname" name="classname" placeholder="Enter the Class Name in the Train ">
+  </div>
+
+  <div class="form-group ">
+    <label for="noofseat">NoofSeat</label>
+    <input type="text" class="form-control" id="noofseat" name="noofseat" placeholder="Enter the Number of Seats ">
+  </div>
+
+  <div class="form-group">
+    <label for="stationfrom">StationFrom</label>
+    <input type="text" class="form-control" id="stationfrom" name="stationfrom" placeholder="Enter the Boarding At ">
+  </div>
+
+  <div class="form-group">
+    <label for="stationto">StationTo</label>
+    <input type="text" class="form-control " id="stationto" name="stationto" placeholder="Enter the Reservation Upto ">
+  </div>
+
+<button type="submit" class="btn btn-primary">Submit</button> 
+</form> 
+</div>
+{% endblock body %}
